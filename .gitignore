@@ -1,0 +1,16 @@
+
+### NODE ###
+
+node_modules/
+
+### PhpStorm ###
+
+.idea/
+**.iws
+.idea_modules/
+vendor/
+*.lock
+package-lock.json
+*-lock.json
+**-lock.json
+bash.exe.stackdump

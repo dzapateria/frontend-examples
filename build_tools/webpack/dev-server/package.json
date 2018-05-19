@@ -1,0 +1,23 @@
+{
+  "name": "webpack-example-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack:build": "webpack -p ./src/main.js -o ./dist/app.js --color",
+    "webpack:watch": "webpack -w ./src/main.js -o ./dist/app.js --color --mode development",
+    "wp": "webpack --config webpack.config-default.js",
+    "wp:dev": "webpack --config webpack.config-dev.js",
+    "wp:server": "webpack -w"
+  },
+  "keywords": [],
+  "author": "dzapateria",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

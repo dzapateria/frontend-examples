@@ -1,0 +1,12 @@
+{
+  "name": "browser-sync-example1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bs": "browser-sync start --port 8080 --tunnel -s --files \"**.html, dist/**/*.js, dist/**/*.css\" --ws"
+  },
+  "keywords": [],
+  "author": "dzapateria - dzapateria@gmail.com",
+  "license": "ISC"
+}

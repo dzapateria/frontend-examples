@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>browser-sync example 1</title>
+</head>
+<body>
+
+<h1>Bienvenido ahora si </h1>
+
+
+<h2> Puntos <span id="points">0</span></h2>
+
+
+<script src="dist/js/app.js"></script>
+
+<script id="__bs_script__">//<![CDATA[
+document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.4'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+
+</body>
+</html>

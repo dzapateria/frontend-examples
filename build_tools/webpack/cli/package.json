@@ -1,0 +1,17 @@
+{
+  "name": "webpack-example-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack:build": "webpack -p ./src/main.js -o ./dist/app.js --color",
+    "webpack:watch": "webpack -w ./src/main.js -o ./dist/app.js --color --mode development "
+  },
+  "keywords": [],
+  "author": "dzapateria",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}

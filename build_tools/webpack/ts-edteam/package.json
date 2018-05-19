@@ -1,0 +1,35 @@
+{
+  "name": "edteam-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript desde cero",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luixaviles/edteam-typescript.git"
+  },
+  "keywords": [
+    "typescript",
+    "webpack"
+  ],
+  "author": "Luis Aviles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luixaviles/edteam-typescript/issues"
+  },
+  "homepage": "https://github.com/luixaviles/edteam-typescript#readme",
+  "dependencies": {
+    "lodash": "latest",
+    "ts-loader": "latest",
+    "typescript": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest"
+  },
+  "devDependencies": {
+    "@types/lodash": "latest"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "browser-sync-example2-php",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bs": "browser-sync start --config bs-config.js"
+  },
+  "keywords": [],
+  "author": "dzapateria - dzapateria@gmail.com",
+  "license": "ISC"
+}

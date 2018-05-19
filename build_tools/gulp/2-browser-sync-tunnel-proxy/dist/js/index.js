@@ -1,0 +1,1 @@
+document.body.innerHTML+= "<br> <h2> NINJA JS<h2>";

@@ -1,0 +1,39 @@
+{
+  "name": "npm-scripts-build-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync start --config bs-config.js",
+    "clean": "rimraf dist/*",
+    "build:js": "tsc",
+    "minify": "postcss --use cssnano -o dist/css/main-min.css dist/css/main-prefix.css",
+    "postcss": "postcss -u autoprefixer --autoprefixer.browsers \"> 5%\" -o tmp/main-prefix.css tmp/main.css",
+    "sass:dev": "node-sass src/scss -o dist/css",
+    "sass": "npm run sass src/scss -o tmp",
+    "build:postcss": "npm run sass && npm run postcss",
+    "watch:postcss": "watch \"run-s build:postcss\" ./src/scss/",
+    "watch:css": "watch \"run-s sass:dev\" ./src/scss/",
+    "watch:js": "watch \"run-s build:js\" ./src/ts/",
+    "pro": "run-s build:css build:js",
+    "dev": "run-p watch:css watch:js server"
+  },
+  "keywords": [],
+  "author": "dzapateria <dzapateria@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.5.0",
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "latest",
+    "cssnano": "^3.10.0",
+    "node-sass": "latest",
+    "npm-run-all": "latest",
+    "postcss": "^6.0.22",
+    "postcss-cli": "^5.0.0",
+    "rimraf": "latest",
+    "typescript": "latest",
+    "watch": "latest",
+    "copy": "latest"
+  },
+  "dependencies": {}
+}

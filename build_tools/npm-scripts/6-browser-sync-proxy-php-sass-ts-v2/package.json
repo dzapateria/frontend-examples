@@ -1,0 +1,25 @@
+{
+  "name": "npm-scripts-build-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync start --config bs-config.js",
+    "clean": "rimraf dist/*",
+    "onchange:css": "onchange \"./src/scss/*.scss\" -- node-sass src/scss -o dist/css",
+    "onchange:js": "onchange \"./src/ts/*.ts\" -- tsc",
+    "start": "run-p server onchange:css onchange:js"
+  },
+  "keywords": [],
+  "author": "dzapateria <dzapateria@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "rimraf": "latest",
+    "node-sass": "latest",
+    "npm-run-all": "latest",
+    "onchange": "latest",
+    "typescript": "latest"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,12 @@
+body {
+  background: white;
+  color: black; }
+
+h1 {
+  color: black; }
+
+h2 {
+  color: #000000; }
+
+::placeholder {
+  color: gray; }

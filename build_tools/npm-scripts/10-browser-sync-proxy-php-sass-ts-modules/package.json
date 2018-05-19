@@ -1,0 +1,27 @@
+{
+  "name": "npm-scripts-build-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "browser-sync start --config bs-config.js",
+    "clean": "rimraf dist/js/*",
+    "watch:css": "watch \"node-sass src/scss -o dist/css\" ./src/scss/",
+    "watch:js": "watch \"npm run clean && tsc\" ./src/ts/",
+    "start": "run-p server watch:css watch:js"
+  },
+  "keywords": [],
+  "author": "dzapateria <dzapateria@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "node-sass": "latest",
+    "npm-run-all": "latest",
+    "rimraf": "latest",
+    "typescript": "^2.8.3",
+    "watch": "latest"
+  },
+  "dependencies": {
+    "systemjs": "^0.21.3"
+  }
+}

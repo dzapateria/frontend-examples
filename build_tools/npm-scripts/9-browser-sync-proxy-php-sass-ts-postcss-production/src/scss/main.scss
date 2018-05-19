@@ -1,0 +1,16 @@
+$primaryTextColor: black;
+$secundaryTextColor: #000000;
+$fondoPrincipal: rgb(255, 255, 255);
+body {
+  background: $fondoPrincipal;
+  color: $primaryTextColor;
+}
+
+$color: primaryTextColor;
+h2 {
+  color: $secundaryTextColor;
+}
+
+::placeholder {
+  color: gray;
+}

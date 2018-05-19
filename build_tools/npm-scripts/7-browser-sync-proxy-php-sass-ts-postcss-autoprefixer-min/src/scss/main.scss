@@ -1,0 +1,21 @@
+
+$primaryTextColor: black;
+$secundaryTextColor: #000000;
+
+$fondoPrincipal: yellow;
+
+body{
+  background: $fondoPrincipal;
+  color: $primaryTextColor;
+}
+
+h1{
+  color: $primaryTextColor;
+}
+
+h2{
+  color: $secundaryTextColor;
+}
+::placeholder {
+  color: gray;
+}

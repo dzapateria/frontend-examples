@@ -1,0 +1,24 @@
+
+$primaryTextColor: rgb(40, 119, 4);
+$secundaryTextColor: #000000;
+
+$fondoPrincipal: rgb(180, 224, 19) ;
+
+body{
+  background: $fondoPrincipal ;
+  color: $primaryTextColor;
+}
+
+h1{
+  color: $primaryTextColor;
+}
+
+h2{
+  color: $secundaryTextColor;
+}
+
+#box{
+width: 200px;
+height: 200px;
+background: rgb(243, 171, 171);
+}

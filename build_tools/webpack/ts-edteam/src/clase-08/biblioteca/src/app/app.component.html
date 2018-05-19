@@ -1,0 +1,26 @@
+<h2>Biblioteca</h2>
+
+<div>
+  <label for="busqueda">Buscar Libro:</label>
+  <input type="text" name="busqueda" (keyup)="buscarLibro($event)">
+</div>
+
+<div *ngIf="errorBusqueda">
+  No existen resultados para la busqueda.
+</div>
+
+<div *ngIf="!errorBusqueda">
+  <table style="width:100%">
+    <tr>
+      <th>Codigo</th>
+      <th>Titulo</th>
+      <th>Autor</th>
+    </tr>
+    <tr *ngFor="let libro of libros">
+      <td>{{libro.id}}</td>
+      <td>{{libro.titulo}}</td>
+      <td>{{libro.autor}}</td>
+    </tr>
+  </table>
+</div>
+
