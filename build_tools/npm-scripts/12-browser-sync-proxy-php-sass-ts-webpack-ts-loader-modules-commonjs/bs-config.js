@@ -16,7 +16,7 @@ module.exports = {
     // "tunnel": { tunnel: false},
     "files": [
         "*.html",
-        "_includes/*.php",
+        "_partials/*.php",
         "*.php",
         "dist/js/*.js",
         "dist/css/*.css"
@@ -71,7 +71,7 @@ module.exports = {
     "injectChanges": true,
     "startPath": null,
     "minify": false,
-    "host": "192.168.1.142",
+    "host": "192.168.1.83",
     "localOnly": false,
     "codeSync": true,
     "timestamps": true,

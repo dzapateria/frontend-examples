@@ -24,19 +24,23 @@
 |  
 */
 //Function 
-import alumnoSaluda = require('./alumno');
+import alumnoSaluda = require('./commonjs-alumnoFn');
 // Output in body
 
 // Mostrando la salida para test 
-$('body').append(
-    `<hr><h2> Función alumnoSaluda("Paco") importada con import x = require('x') 
-                    Devuelve: <br> ${alumnoSaluda("Paco")} </h2>`
-);
 
+alumnoSaluda("Paco");
 
-// Constante con objeto
-import optionsGlobal = require('./optionsGlobal');
-$('body').append(`<hr><h2>Opciones: ${optionsGlobal.titulo}</h2>`);
+// Constante de opciones objeto
+import options1 = require('./commonjsOpt');
+// $('body').append(`<hr><h2>Opciones: ${options1.titulo}</h2>`);
+
+// -------------------------------------------
+
+// Clase Profesor
+import Profesor = require('./commonjsProfesor');
+var javier = new Profesor('Javier Jimenez Martín', 22, true);
+$('body').append(`<hr><h2>Profesor dice: ${javier.saludar()} !</h2>`);
 
 
 /*
@@ -49,12 +53,16 @@ $('body').append(`<hr><h2>Opciones: ${optionsGlobal.titulo}</h2>`);
 
 import { Estudiante } from './Estudiante';
 
-let garcia = new Estudiante("Paco", "Gomez");
+let garcia = new Estudiante("Paco", "Gomez", 22);
 $('row').append(`<hr><h2> ${garcia.suspender()}  </h2>`);
 
 $("button").click(function () {
     console.log("registrado")
 });
+
+import * as profe from './profesorFn';
+
+$('body').append(` ${profe.profesorSaluda('<h3>Soy el Nuevo profe, llamarme al</h3>')},Tel: ${profe.datos.telefono}`);
 
 
 /* OUTPUTS SALIDAS */

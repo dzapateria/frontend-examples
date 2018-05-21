@@ -4,7 +4,8 @@
     //"pretty": true,
     "module": "commonjs", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "strict": true /* Enable all strict type-checking options. */,
-    //"sourceMap": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
     "moduleResolution": "node"
   },
   "exclude": [

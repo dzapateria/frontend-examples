@@ -1,4 +1,4 @@
-export interface Persona {
+export interface IEstudiante {
     nombre: string;
     apellido: string;
 }
