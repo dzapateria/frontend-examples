@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+Options -MultiViews
+RewriteEngine On
+
+# redirect "index.php?pag=$name" to "/$name"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ index.php?pag=$1.php [L]
