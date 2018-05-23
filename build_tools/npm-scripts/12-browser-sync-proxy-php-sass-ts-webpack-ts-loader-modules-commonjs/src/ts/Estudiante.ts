@@ -1,14 +1,12 @@
 
-import { IEstudiante } from "./EstudianteInterface";
+import { Persona } from "./IPersona";
 
-export class Estudiante implements IEstudiante {
+export class Estudiante implements Persona {
     nombre: string;
     apellido: string;
-    edad: number;
-    constructor(nombre: string, apellido: string, edad: number) {
+    constructor(nombre: string, apellido: string) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad
     }
     suspender() {
         return `suspendido: ${this.nombre}, ${this.apellido}`;
