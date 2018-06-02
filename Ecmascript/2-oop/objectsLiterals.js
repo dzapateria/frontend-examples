@@ -1,7 +1,47 @@
-var diasDeLaSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+"use strict";
 
-console.log(typeof diasDeLaSemana);
+/*
+|-------------------------------------------
+|   ARRAYS
+|-------------------------------------------
+*/
+
+var diasDeLaSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+
+/* console.log(diasDeLaSemana[0])
+console.log(diasDeLaSemana[3]) */
+
+var vocales = ['a', 'e', 'i', 'o', 'u'];
+var numerosMix = ['uno', 'dos', 'tres', 4, 5, 6];
+var listaCompra = ["Mantequilla", "Arroz", "Agua", "Pollo"]
+
+/*
+console.log(listaCompra[0])
+console.log(listaCompra[3]) */
+
+var coleccion = [
+    vocales,
+    diasDeLaSemana,
+    listaCompra
+]
+
+console.log(coleccion[0][3]);
+console.log(typeof coleccion[2]);
 console.log(diasDeLaSemana[1]);
+
+
+
+/*
+|-------------------------------------------
+|   MULTIDIMENSIONAL ARRAYS
+|-------------------------------------------
+*/
+
+
+
+
+
+
 
 var usuario = {
     email: 'dzapateria@gmail.com',
@@ -33,6 +73,12 @@ var menu = {
     backgroundColor: '#FFFFFF',
     font: 'Arial',
     fontSize: 17
+}
+
+var coleccionObj = {
+    libro,
+    menu,
+    fecha
 }
 
 var libroPlantilla = {
