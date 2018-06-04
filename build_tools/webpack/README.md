@@ -66,7 +66,7 @@ Webpack hace cosas muy interesantes para el desarrollo web, algunas a destacar s
 node_modules/.
 
 ## REFERENCIAS
-
+- <https://github.com/Lemoncode/webpack-by-sample>
 - Documentación oficial webpack 
 https://webpack.js.org 
 - Stackoverflow
