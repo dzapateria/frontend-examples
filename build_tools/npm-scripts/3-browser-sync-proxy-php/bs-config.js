@@ -29,7 +29,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": false,
-    "proxy": "http://frontend-examples-tools.test/build_tools/npm-scripts/3-bsconfig-server-tunnel-proxy/", // PODEMOS PONER IP, localhost, O VIRTUAL HOST (para php)
+    "proxy": "http://frontend-examples.test/build_tools/npm-scripts/3-bsconfig-server-tunnel-proxy/", // PODEMOS PONER IP, localhost, O VIRTUAL HOST (para php)
     "port": 3000,
     "middleware": false,
     "serveStatic": [],

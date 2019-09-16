@@ -6,7 +6,7 @@
   "scripts": {
     "bs-config-all": "browser-sync start --config bs-config-all.js",
     "bs-config": "browser-sync start --config bs-config.js",
-    "bs": "browser-sync start --tunnel --proxy localhost --host 192.168.1.142 --files index.php, dist/css/*.css, dist/js/*.js "
+    "bs": "browser-sync start --tunnel --proxy localhost --host 192.168.1.88 --files index.php, dist/css/*.css, dist/js/*.js "
   },
   "keywords": [],
   "author": "dzapateria - dzapateria@gmail.com",

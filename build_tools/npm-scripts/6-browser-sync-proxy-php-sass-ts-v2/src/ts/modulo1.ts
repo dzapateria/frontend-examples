@@ -1,2 +1,3 @@
 
-document.body.innerHTML += "<h2> EL MENU </h2>";
+
+console.log('test');

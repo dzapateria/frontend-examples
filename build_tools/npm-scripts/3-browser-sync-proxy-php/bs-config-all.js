@@ -35,7 +35,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": false,
-    "proxy":"http://frontend-examples-tools.test/build_tools/npm-scripts/browser-sync/3-bsconfig-server-tunnel-proxy",
+    "proxy":"http://frontend-examples.test/build_tools/npm-scripts/browser-sync/3-bsconfig-server-tunnel-proxy",
     "port": 4000,
     "middleware": false,
     "serveStatic": [],
