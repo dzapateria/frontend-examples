@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var numeros_1=require("./numeros");console.log(numeros_1.PI);var Foo_1=require("./Foo"),algo=new Foo_1.Foo("paco");console.log("Hola desde index de typescript");

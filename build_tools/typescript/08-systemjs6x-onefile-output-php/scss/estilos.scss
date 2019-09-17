@@ -1,0 +1,13 @@
+$base-color: black;
+$dark: rgba($base-color, 0.80);
+/* */
+
+$primario: #f0ff0e;
+
+body {
+background-color: $dark;
+}
+
+body{
+  color: $primario;
+}

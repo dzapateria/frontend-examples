@@ -1,0 +1,1 @@
+"use strict";function restar(e,r){return e-r}Object.defineProperty(exports,"__esModule",{value:!0}),exports.PI=100,exports.restar=restar;
