@@ -11,4 +11,4 @@ var Greeter = /** @class */ (function () {
 ;
 var greeter = new Greeter("Hola mundo");
 document.write(greeter.greet());
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.ts.map

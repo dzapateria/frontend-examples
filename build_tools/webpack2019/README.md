@@ -2,4 +2,5 @@
 
 - 01 - Basica sin archivo webpack.config.js
 - 02 - Basica con archivo webpack.config.js
-- 03 - 
+    Webpack carga modulos con import export de ES2015 pero necesitarás cargar babel/TS para poder utilizar otras funcionalidades o convertir a ES5.
+- 03 - Typescript - Ts-loader.

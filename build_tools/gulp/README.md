@@ -17,7 +17,7 @@
     index.html
     dist/
        js/
-         |__ index.js
+         |__ index.ts
        css/
          |__ index.css
   ```

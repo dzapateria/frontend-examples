@@ -9,7 +9,7 @@
     ``` 
     npm install webpack webpack-cli -D
     ```
-- Creamos un index.html y un index.js con algo de código, en el index.html apunta
+- Creamos un index.html y un index.ts con algo de código, en el index.html apunta
 a el nombre de salida de tu js. Ejemplo si tu entra es main.js y tu salida es app.js.
 
     ``` 

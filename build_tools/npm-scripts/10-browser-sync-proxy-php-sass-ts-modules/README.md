@@ -7,7 +7,7 @@ En el package.json el objeto devDependencies de esta forma
   "name": "npm-scripts-build-typescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": index.ts,
   "scripts": {
     "server": "browser-sync start --config bs-config.js",
     "clean": "rimraf dist/*",

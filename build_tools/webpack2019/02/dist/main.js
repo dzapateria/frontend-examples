@@ -88,7 +88,7 @@
 
 /***/ "./src/bar.js":
 /*!********************!*\
-  !*** ./src/bar.js ***!
+  !*** ./src/bar.ts ***!
   \********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -104,7 +104,7 @@ function bar() {
 
 /***/ "./src/cuadradolib.js":
 /*!****************************!*\
-  !*** ./src/cuadradolib.js ***!
+  !*** ./src/cuadradolib.ts ***!
   \****************************/
 /*! exports provided: sqrt, square, diag */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -129,7 +129,7 @@ console.log("Modulo cuadrado cargado");
 
 /***/ "./src/index.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/index.ts ***!
   \**********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -142,7 +142,7 @@ __webpack_require__.r(__webpack_exports__);
 
 Object(_bar__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
-console.log("He i am index.js 2x");
+console.log("He i am index.ts 2x");
 
 
 console.log(Object(_cuadradolib__WEBPACK_IMPORTED_MODULE_1__["square"])(11)); // 121

@@ -2,7 +2,7 @@ import bar from './bar';
 
 bar();
 
-console.log("He i am index.js 2x");
+console.log("He i am index.ts 2x");
 
 import { square, diag } from './cuadradolib';
 console.log(square(11)); // 121

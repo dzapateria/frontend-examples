@@ -61,4 +61,4 @@ var MENSAJES = [
 function obtenerError(numError) {
     return MENSAJES[numError];
 }
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.ts.map
