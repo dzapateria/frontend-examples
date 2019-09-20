@@ -5,6 +5,6 @@
 </head>
 <body>
 ...
-<script src="dist/bundle.js"></script>
+<script src="dist/main.js?=<?=time()?>"></script>
 </body>
 </html>

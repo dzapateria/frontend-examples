@@ -1,3 +1,3 @@
 export default function bar() {
-    console.log("He i am bar 2");
+    console.log("He i am bar 2x");
 }
