@@ -1,3 +1,3 @@
 export default function bar() {
-    console.log("He cambiado bar ");
+    console.log("He cambiado bar 2");
 }

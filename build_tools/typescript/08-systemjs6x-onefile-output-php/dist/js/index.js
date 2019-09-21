@@ -9,7 +9,7 @@ System.register("Foo", [], function (exports_1, context_1) {
             Foo = /** @class */ (function () {
                 function Foo(name) {
                     this.name = name;
-                    console.log("Creada guay 4");
+                    console.log("Es una clase exportada cargada");
                 }
                 ;
                 return Foo;
@@ -52,7 +52,7 @@ System.register("index", ["numeros", "Foo"], function (exports_3, context_3) {
             console.log(numeros_1.PI);
             algo = new Foo_1.Foo("pacos");
             console.log("Hola desde index de typescript");
-            document.write("ESTO DESDE JAVASCRIPT");
+            document.write("ESTO DESDE TS FUNCIONA BIEN");
         }
     };
 });
@@ -63,4 +63,4 @@ var MENSAJES = [
 function obtenerError(numError) {
     return MENSAJES[numError];
 }
-//# sourceMappingURL=index.ts.map
+//# sourceMappingURL=index.js.map

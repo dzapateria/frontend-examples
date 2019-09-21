@@ -7,4 +7,4 @@ export function diag(x, y) {
     return sqrt(square(x) + square(y));
 }
 
-console.log("Modulo cuadrado X");
+console.log("Modulo se cargo");

@@ -81,74 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/bar.js":
-/*!********************!*\
-  !*** ./src/bar.ts ***!
-  \********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/js/index.js":
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return bar; });
-function bar() {
-    console.log("He i am bar 2x");
-}
-
-/***/ }),
-
-/***/ "./src/cuadradolib.js":
-/*!****************************!*\
-  !*** ./src/cuadradolib.ts ***!
-  \****************************/
-/*! exports provided: sqrt, square, diag */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sqrt", function() { return sqrt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "square", function() { return square; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "diag", function() { return diag; });
-//------ lib.js ------
-const sqrt = Math.sqrt;
-function square(x) {
-    return x * x;
-}
-function diag(x, y) {
-    return sqrt(square(x) + square(y));
-}
-
-console.log("Modulo cuadrado cargado");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.ts ***!
-  \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bar */ "./src/bar.js");
-/* harmony import */ var _cuadradolib__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cuadradolib */ "./src/cuadradolib.js");
-
-
-Object(_bar__WEBPACK_IMPORTED_MODULE_0__["default"])();
-
-console.log("He i am index.ts 2x");
-
-
-console.log(Object(_cuadradolib__WEBPACK_IMPORTED_MODULE_1__["square"])(11)); // 121
-console.log(Object(_cuadradolib__WEBPACK_IMPORTED_MODULE_1__["diag"])(4, 3)); // 5
+eval("console.log(\"he desde index.js sin configuración 23 \");\r\ndocument.write(\"js te saluda 2sdsdf\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map

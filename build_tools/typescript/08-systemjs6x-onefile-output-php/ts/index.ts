@@ -8,4 +8,4 @@ var algo = new Foo("pacos");
 
 console.log("Hola desde index de typescript");
 
-document.write("ESTO DESDE JAVASCRIPT");
+document.write("ESTO DESDE TS FUNCIONA BIEN");

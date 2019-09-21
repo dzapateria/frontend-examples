@@ -6,5 +6,5 @@ bar();
 console.log("------------AHORA VA !! SUPER! ------------");
 
 
-console.log(square(11)); // 121
+console.log(square(15)); // 121
 console.log(diag(4, 3)); // 5

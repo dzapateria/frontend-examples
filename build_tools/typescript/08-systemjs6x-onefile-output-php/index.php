@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/s.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-register.min.js"></script>
-    <script src="dist/js/index.js?v=<?=time()?>"></script>
+    <script src="dist/js/index.js?v=<?php echo time()?>"></script>
     <script>System.import('index');</script>
     <link rel="stylesheet" href="dist/css/estilos.css?v=<?=time()?>">
 
