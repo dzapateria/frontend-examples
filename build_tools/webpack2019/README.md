@@ -57,6 +57,9 @@ Lo añadiremos como script de package.json para poder ejecutarlo con **npm run**
 ->Nota: La carpeta de destino debe existir o lanzará un error, webpack 
 no creara los subdirectorios necearios para alojar el archivo main.js final
 
+## Uso con archivo de configuración.
+
+
 ### Loaders
 Son librerías que nos van a ayudar a transformar archivos.
 
@@ -78,7 +81,10 @@ Desarrollo o producción.
 - 04 - Transpilación con babel.
 - 05 - Typescript - Ts-loader.
 - 06 - typescript - Ts-loader + multiples entradas, salidas y concatenación.
+- 07 - Babel + source maps.
+- 08 - Babel + Source maps + html loader
+- 09 - Devserver + Typescript (NO CONSEGUIDO HACER FUNCIONAR)
+- 10 - Typescript (06) + Gulp for Sass & Browsersync
 
-
-Pendiente sass, devServer, browsersync y Vue 
+Pendiente sass, browsersync y Vue 
 

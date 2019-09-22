@@ -6,16 +6,17 @@
   "scripts": {
     "dev": "webpack --mode development -w",
     "build": "webpack --mode production",
-    "start":
+    "start": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "source-map-loader": "^0.2.4",
-    "ts-loader": "^6.1.0",
+    "ts-loader": "^6.1.2",
     "typescript": "^3.6.3",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   }
 }

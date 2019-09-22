@@ -17,6 +17,7 @@ module.exports = {
     watchOptions: {
         ignored: /node_modules/
     },
+
     module: {
         rules: [
             {
@@ -35,5 +36,5 @@ module.exports = {
                 loader: "source-map-loader"
             }
         ]
-    },
+    }
 };

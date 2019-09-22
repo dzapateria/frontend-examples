@@ -2,7 +2,7 @@
 
 Se han instalado las dependencias para Babel
 ``` 
-npm i -D babel-loader @babel-core @babel/preset-env --save-dev 
+npm i -D babel-loader @babel/core @babel/preset-env
 ```
 Se ha creado un archivo de configuración del transpilador Babel llamado **.babelrc**.
 con el contenido:
