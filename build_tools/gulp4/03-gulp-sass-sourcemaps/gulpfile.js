@@ -11,17 +11,22 @@ function style(){
         //-------- A) One file main
              // return gulp.src('./src/main.scss')
         //--------B) multiple main files in same directory
-            // return gulp.src('./src/{main,caja}*.scss')
+            return gulp.src('./src/{main,caja}*.scss') //
         //--------C) multiple main files in diferent directories
-               return gulp.src(['./src/main.scss', './partials/**/*.scss'])
+             //  return gulp.src(['./src/main.scss', './partials/**/*.scss'])
         //-------D) Compile all main files in directory
-              //return gulp.src('./src/**/*.scss')
+              // return gulp.src('./src/**/*.scss')
 
-    // 2.pass that file through sass compiler
+   // 2. Init sourcemaps
+          .pipe(sourcemaps.init())
+    // 3.pass that file through sass compiler
         .pipe(sass())
-    // 3.where do i save compiled css
+        // 4. write sourcemaps
+       .pipe(sourcemaps.write())
+    // 5.where do i save compiled css
         .pipe(gulp.dest('./dist'))
-    // 4. stream changes to all browsers
+
+    // 5. stream changes to all browsers
         .pipe(browserSync.stream());
 }
 function watch() {

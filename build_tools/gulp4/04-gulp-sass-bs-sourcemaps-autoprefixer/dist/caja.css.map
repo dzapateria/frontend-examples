@@ -1,0 +1,1 @@
+{"version":3,"file":"caja.css","sources":["caja.scss"],"sourcesContent":["\r\n.caja{\r\n  width: 100px;\r\n  height: 200px;\r\n  background: red;\r\n  color: white;\r\n  font-size: 33px;\r\n}"],"names":[],"mappings":"AACA,AAAA,KAAK,CAAA;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,GAAG;EACf,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI,GAChB"}

@@ -1,5 +1,5 @@
 
-## Gulp + Browsersync + Sass + Source maps + Autoprefixer
+## Gulp + Browsersync + Sass + Source maps
 Referencias:
 - [Kevin Powell - Gulp v4 - Sass and BrowserSync Setup](https://youtu.be/QgMQeLymAdU) youtube
 - https://coder-coder.com/gulp-4-walk-through/
