@@ -1,6 +1,6 @@
 // Initialize modules
-
-const gulp        = require('gulp');
+const gulp = require('gulp');
+const { series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -12,18 +12,21 @@ const concat = require('gulp-concat');
 
 const config = {
     proxy: 'frontend-examples.test/build_tools/gulp4/06-gulp-concat-files/',  //format  frontend-examples.test
-    scssPath: 'scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
-    jsPath: 'es5/**/{main,write,lib}*.js', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
-    jsDir: 'es5/**/*.js',
-    scssDir: 'scss/**/*.scss',
-    filesDir: './**/*.{php,html,twig,json}', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
+
+    scssInputs: 'scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
+    jsInputs: ['es5/modulo/**/{write}*.js', 'es5/**/{main,write,lib3,lib2,lib}*.js'], // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
+
+    jsWathDir: 'es5/**/*.js',
+    scssWathDir: 'scss/**/*.scss',
+    filesWatch: './**/*.{php,html,twig,json}', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
+
     outDir: './dist'
 }
 
 function style(){
 
     /* 1. Entradas de los css de origen, opciones de ejemplo, descomenta la deseada */
-     return gulp.src(config.scssPath)
+     return gulp.src(config.scssInputs)
      // return gulp.src('./src/main.scss') /*  Un archivo de entrada único */
      // return gulp.src(['./src/main.scss', './partials/**/*.scss']) /* Multiples entradas en diferentes directorios NOTA: Generara 2 salidas */
      // return gulp.src('./src/**/*.scss')/* Compilar todo del directorio Nota: Puedes poner en una carpeta los que realizan imports */
@@ -42,12 +45,20 @@ function style(){
       .pipe(browserSync.stream());
 }
 
+// Cachebusting task
+const crand = new Date().getTime();
+function cache_version(){
+    return gulp.src(['index.php'])
+        .pipe(replace(/cver=\d+/g, 'cver=' + '123' + crand))
+        .pipe(gulp.dest('index.php'));
+}
+
 
 function js(){
-    return gulp.src(config.jsPath) // CUIDADO CON LOS ESPACIOS ENTRE {}
+    return gulp.src(config.jsInputs) // CUIDADO CON LOS ESPACIOS ENTRE {}
+        .pipe(concat('vendor.js'))
         .pipe(gulp.dest(config.outDir))
         .pipe(browserSync.stream());
-
 }
 
 function watch() {
@@ -55,18 +66,20 @@ function watch() {
         proxy: config.proxy
         //tunnel: 'soloaplicaciones'
     });
-    gulp.watch(config.scssDir, style);
-    gulp.watch(config.jsDir, js);
+    gulp.watch(config.scssWathDir, style);
+    gulp.watch(config.jsWathDir, js);
     /* Si hubiera otra ruta donde tienes scss */
     // gulp.watch('partials/**/*.scss', style);
     //gulp.watch('./src/**/*.js').on('change', browserSync.reload);
 
-    gulp.watch(config.filesDir).on('change', browserSync.reload) // CUIDADO CON LOS ESPACIOS ENTRE {}
+    gulp.watch(config.filesWatch).on('change', browserSync.reload) // CUIDADO CON LOS ESPACIOS ENTRE {}
 }
-exports.style = style;
-exports.watch = watch;
-exports.js = js;
+
+exports.js = js; /*  run task with $gulp js */
 
 
-style();
-js();
+exports.default = series( /* run group tasks with $ gulp  */
+    //cache_version,
+    js, style,
+    watch
+)
