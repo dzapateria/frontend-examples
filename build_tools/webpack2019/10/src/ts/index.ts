@@ -1,6 +1,6 @@
+//index.js
 import bar from './bar';
 import { square, diag } from './cuadradolib';
-
 bar();
 
 console.log("------------AHORA VA !! SUPER! ------------");

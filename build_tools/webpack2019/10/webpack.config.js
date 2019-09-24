@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   //  mode: 'development', // production
     entry: {
-        'main': ['./src/ts/index.ts', './src/ts/suma.ts'], // suma se concatenara, index.ts concatenara todos sus imports
+        'main': ['./src/ts/suma.ts', './src/ts/index.ts' ], // suma se concatenara, index.ts concatenara todos sus imports
         'libre': './src/ts/libre.ts' // este no se concatenará salvo que tenga imports, se creara su propio libre.js y debera ser añadido con script src=
     },
     output: {

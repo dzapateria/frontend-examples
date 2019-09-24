@@ -1,4 +1,4 @@
-## 10 TS + Webpack + Gulp-Sass & BrowserSync Tunnel
+## 10 TS + Webpack + BrowserSync Tunnel
 
 ## Requerimientos
 
@@ -8,7 +8,7 @@ npm i webpack webpack-cli ts-loader typescript source-map-loader -D
 ```
 Compilación de SCSS y Browser-Sync
 ``` 
-npm i browser-sync gulp -D
+npm i browser-sync -D
 ```
 Instalación de gulp-cli globalmente
 ``` 

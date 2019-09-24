@@ -5,8 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "webpack --mode development -w",
-    "build": "webpack --mode production",
-    "start":
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",

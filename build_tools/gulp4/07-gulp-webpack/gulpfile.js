@@ -11,7 +11,7 @@ const concat = require('gulp-concat');
 // File path & variables
 
 const config = {
-    proxy: 'frontend-examples.test/build_tools/gulp4/06-gulp-concat-files/',  //format  frontend-examples.test
+    proxy: 'frontend-examples.test/build_tools/gulp4/07-gulp-webpack/',  //format  frontend-examples.test
 
     scssInputs: 'scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
     jsInputs: ['es5/modulo/**/{write}*.js', 'es5/**/{main,write,lib3,lib2,lib}*.js'], // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
