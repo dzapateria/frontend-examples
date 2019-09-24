@@ -1,5 +1,5 @@
 
-## Gulp + Browsersync + Sass + Source maps + Autoprefixer
+## 06 Gulp + concat files
 Referencias:
 - [Kevin Powell - Gulp v4 - Sass and BrowserSync Setup](https://youtu.be/QgMQeLymAdU) youtube
 - https://coder-coder.com/gulp-4-walk-through/
@@ -7,7 +7,7 @@ Referencias:
 
 Instala dependencias de desarrollo
 ``` 
-npm i browser-sync gulp gulp-sass gulp-sourcemaps gulp-postcss autoprefixer -D
+npm i browser-sync gulp gulp-sass gulp-sourcemaps gulp-postcss autoprefixer gulp-concat -D
 ```
 Instala globalmente
 ``` 

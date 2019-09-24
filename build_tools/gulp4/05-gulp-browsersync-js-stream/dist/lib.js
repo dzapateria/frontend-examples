@@ -1,0 +1,1 @@
+console.log("soy la libreria lib.js");
