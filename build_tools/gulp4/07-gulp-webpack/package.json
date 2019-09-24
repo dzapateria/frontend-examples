@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "webpack-dev": "webpack --mode development -w",
+    "webpack-p": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,11 @@
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.1.2",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   }
 }

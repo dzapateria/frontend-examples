@@ -1,2 +1,2 @@
 //lib2.js
-console.log("lib2 cargo");
+console.log("lib2 cargo bien");
