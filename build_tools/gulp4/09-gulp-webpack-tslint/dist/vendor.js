@@ -1,0 +1,16 @@
+
+//write.js
+document.write('QUE TAL VAMOS CACHE TEST 6');
+
+
+// main.js
+console.log("cacha falla--");
+
+// lib3.js
+console.log('------lib3');
+//lib2.js
+console.log("lib2 cargo bien");
+
+//lib.js
+console.log("soy la libreria lib 1.js");
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vZHVsby93cml0ZS5qcyIsIm1haW4uanMiLCJsaWIzLmpzIiwibGliMi5qcyIsImxpYi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FDSkE7QUFDQTtBQUNBO0FDRkE7QUFDQTtBQ0RBO0FBQ0E7QUNEQTtBQUNBO0FBQ0EiLCJmaWxlIjoidmVuZG9yLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi8vd3JpdGUuanNcclxuZG9jdW1lbnQud3JpdGUoJ1FVRSBUQUwgVkFNT1MgQ0FDSEUgVEVTVCA2Jyk7XHJcblxyXG4iLCIvLyBtYWluLmpzXHJcbmNvbnNvbGUubG9nKFwiY2FjaGEgZmFsbGEtLVwiKTtcclxuIiwiLy8gbGliMy5qc1xyXG5jb25zb2xlLmxvZygnLS0tLS0tbGliMycpOyIsIi8vbGliMi5qc1xyXG5jb25zb2xlLmxvZyhcImxpYjIgY2FyZ28gYmllblwiKTsiLCJcclxuLy9saWIuanNcclxuY29uc29sZS5sb2coXCJzb3kgbGEgbGlicmVyaWEgbGliIDEuanNcIik7Il19
