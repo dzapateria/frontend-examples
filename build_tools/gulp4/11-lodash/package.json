@@ -15,9 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "@types/lodash": "^4.14.139",
     "@types/node": "^12.7.7",
     "autoprefixer": "^9.6.1",
     "browser-sync": "^2.26.7",
+    "expose-loader": "^0.7.5",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
@@ -31,5 +34,11 @@
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "popper.js": "^1.15.0"
   }
 }
