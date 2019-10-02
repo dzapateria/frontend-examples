@@ -7,4 +7,4 @@ export function diag(x, y) {
     return sqrt(square(x) + square(y));
 }
 
-console.log("se cargo cuadradolib.ts en clase");
+console.log("se cargo cuadradolib.ts");

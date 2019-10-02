@@ -1,14 +1,13 @@
 
 
 export function boton(){
-
-        $("button").click(() => {
+    $(function(){
+        $("button").click(function(){
             $("p").hide();
-            console.log('boton se ejecuto');
         });
+    });
 
-
-
+    console.log('boton se ejecuto');
 }
 
 

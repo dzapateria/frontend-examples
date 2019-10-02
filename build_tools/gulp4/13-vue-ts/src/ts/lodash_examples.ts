@@ -8,6 +8,6 @@ export default class Lo{
 
     public primero(ar){
         // @ts-ignore
-        return _.last(ar);
+        return _.first(ar);
     }
 }

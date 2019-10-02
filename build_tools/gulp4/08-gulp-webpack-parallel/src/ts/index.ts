@@ -9,5 +9,5 @@ escribir_en_pantalla('Hola escrito desde funcion de parametro');
 console.log("INDEX.TS cargo y imprime este mensaje");
 
 
-console.log(square(25)); // 121
+console.log(square(2525)); // 121
 console.log(diag(4, 3)); // 5

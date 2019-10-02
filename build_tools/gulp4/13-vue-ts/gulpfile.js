@@ -7,14 +7,21 @@ const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
+const uglifyJs = require('gulp-uglify');
 
 // File path & variables
 
 const config = {
-    proxy: 'frontend-examples.test/build_tools/gulp4/08-gulp-webpack-parallel/',  //format  frontend-examples.test
+    proxy: 'frontend-examples.test/build_tools/gulp4/13-vue-ts/',  //format  frontend-examples.test
 
     scssInputs: 'scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
-    jsInputs: ['es5/modulo/**/{write}*.js', 'es5/**/{main,write,lib3,lib2,lib}*.js'], // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
+    jsInputs: [
+        'node_modules/lodash/lodash.min.js',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        'es5/**/{main,write,lib3,lib2,lib}*.js',
+        'es5/modulo/**/{write}*.js'
+    ],  // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN { }
 
     jsWathDir: 'es5/**/*.js',
     scssWathDir: 'scss/**/*.scss',
@@ -22,6 +29,14 @@ const config = {
 
     outDir: './dist'
 }
+
+function jscompress(){
+      return gulp.src('./dist/**/*.js')
+          .pipe(uglifyJs())
+          .pipe(gulp.dest(config.outDir)
+    );
+}
+
 
 function css(){
 
@@ -40,18 +55,19 @@ function css(){
 }
 
 function js(){
-    return gulp.src(config.jsInputs) // CUIDADO CON LOS ESPACIOS ENTRE {}
+    return gulp.src(config.jsInputs)
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         .pipe(sourcemaps.write())
+
         .pipe(gulp.dest(config.outDir))
         .pipe(browserSync.stream());
 }
 
 function watch() {
     browserSync.init({
-        proxy: config.proxy,
-        tunnel: 'soloaplicaciones'
+        proxy: config.proxy
+        //tunnel: 'soloaplicaciones'
     });
     gulp.watch(config.scssWathDir, css);
     gulp.watch(config.jsWathDir, js);
@@ -62,6 +78,8 @@ function watch() {
 
 exports.js = js; /*  $gulp js */
 exports.css = css; /*  $gulp js */
-exports.build = series(js, css)
+exports.jscompress = jscompress;
+
+exports.build = series(js, css, jscompress)
 
 exports.default = series(js, css, watch) /* $gulp */
