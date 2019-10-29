@@ -13,20 +13,23 @@ const uglifyJs = require('gulp-uglify');
 
 const config = {
     proxy: 'frontend-examples.test/build_tools/gulp4/13-vue-ts/',  //format  frontend-examples.test
-
-    scssInputs: 'scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
-    jsInputs: [
-        'node_modules/lodash/lodash.min.js',
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-        'es5/**/{main,write,lib3,lib2,lib}*.js',
-        'es5/modulo/**/{write}*.js'
+    scssInputs: 'src/scss/**/{main,caja}*.scss', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {} - Multiples entradas, y directorio padre NOTA: Generara 2 salidas
+    jsVendorInputs: [
+        'src/js/vendor/lodash.min.js',
+        'src/js/vendor/jquery.min.js',
+        'src/js/vendor/vue.min.js',
     ],  // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN { }
-
-    jsWathDir: 'es5/**/*.js',
-    scssWathDir: 'scss/**/*.scss',
+    jsPluginsInputs:['src/js/plugins/bootstrap.bundle.min.js'],
+    jsOnReadyInputs:[
+        'src/onready/functions/{uno,dos,tres}.js',
+        'src/onready/**/{lib1,lib2,lib3}*.js'
+    ],
+    jsWathDir: [
+        'src/onready/**/{*.js,*.ts}',
+        'src/ts/**/{*.ts}'
+    ],
+    scssWathDir: 'src/scss/**/*.scss',
     filesWatch: './**/*.{php,html,twig,json}', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
-
     outDir: './dist'
 }
 
@@ -54,15 +57,33 @@ function css(){
       .pipe(browserSync.stream());  /* 7. Enviar cambios a los navegadores */
 }
 
-function js(){
-    return gulp.src(config.jsInputs)
+function jsVendor(){
+    return gulp.src(config.jsVendorInputs)
         .pipe(sourcemaps.init())
         .pipe(concat('vendor.js'))
         .pipe(sourcemaps.write())
-
         .pipe(gulp.dest(config.outDir))
         .pipe(browserSync.stream());
 }
+
+function jsPlugins(){
+    return gulp.src(config.jsPluginsInputs)
+        .pipe(sourcemaps.init())
+        .pipe(concat('plugins.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.outDir))
+        .pipe(browserSync.stream());
+}
+
+function jsOnReady(){
+    return gulp.src(config.jsOnReadyInputs)
+        .pipe(sourcemaps.init())
+        .pipe(concat('onready.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(config.outDir))
+        .pipe(browserSync.stream());
+}
+
 
 function watch() {
     browserSync.init({
@@ -70,16 +91,18 @@ function watch() {
         //tunnel: 'soloaplicaciones'
     });
     gulp.watch(config.scssWathDir, css);
-    gulp.watch(config.jsWathDir, js);
+    gulp.watch(config.jsWathDir, jsOnReady);
     /* Si hubiera otra ruta donde tienes scss */
     // gulp.watch('partials/**/*.scss', css);
     gulp.watch(config.filesWatch).on('change', browserSync.reload) // CUIDADO CON LOS ESPACIOS ENTRE {}
 }
 
-exports.js = js; /*  $gulp js */
+exports.jsVendor = jsVendor; /*  $gulp js */
+exports.jsPlugins = jsPlugins; /*  $gulp js */
+exports.jsOnReady = jsOnReady; /*  $gulp js */
 exports.css = css; /*  $gulp js */
 exports.jscompress = jscompress;
 
-exports.build = series(js, css, jscompress)
+exports.build = series(jsVendor, jsPlugins,  jsOnReady, css, jscompress)
 
-exports.default = series(js, css, watch) /* $gulp */
+exports.default = series(jsOnReady, css, watch) /* $gulp */

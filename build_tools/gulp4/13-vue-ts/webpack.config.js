@@ -1,38 +1,22 @@
 const path = require('path');
-const TSLintPlugin = require('tslint-webpack-plugin');
-
+//const TSLintPlugin = require('tslint-webpack-plugin');
 module.exports = {
-  //  mode: 'development', // production
-   /* entry: {
-        'index': './src/ts/index.ts', // suma se concatenara, index.ts concatenara todos sus imports
-        'componente': './src/ts/componente.ts', // este no se concatenará salvo que tenga imports, se creara su propio libre.js y debera ser añadido con script src=
-        'need_lodash': './src/ts/need_lodash.ts'
-    },*/
    entry: ['./src/ts/index.ts','./src/ts/componente.ts','./src/ts/need_lodash.ts'],
-
     output: {
-        path: path.resolve(__dirname, 'es5/webpack'),
-        // filename: '[name].js'
+        path: path.resolve(__dirname, 'dist/'),
         filename: 'webpack-bundle.js'
     },
     devtool: "inline-source-map",
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
     },
-    watchOptions: {
-        ignored: /node_modules/
-    },
+    watchOptions: {ignored: /node_modules/},
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
+                loader: "ts-loader",
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader"
-                    }
-                ],
-
             },
             {
                 enforce: "pre",
@@ -42,15 +26,8 @@ module.exports = {
         ]
     },
     plugins: [
-        new TSLintPlugin({
-            files: ['./src/ts/**/*.ts']
-        })
+        // new TSLintPlugin({
+        //     files: ['./src/ts/**/*.ts']
+        // })
     ]
-  /* externals:{
-         jquery: {
-             commonjs: 'jQuery',
-             root: '$'
-         }
-
-   }*/
 };

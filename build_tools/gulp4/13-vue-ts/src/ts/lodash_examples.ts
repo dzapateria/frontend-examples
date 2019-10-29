@@ -1,6 +1,4 @@
 
-
-
 export default class Lo{
     constructor(){
         console.log('clase lo de lodash cargada correcto');
@@ -11,3 +9,4 @@ export default class Lo{
         return _.first(ar);
     }
 }
+

@@ -1,8 +1,8 @@
 
-
+// AL ESTAR EN externals NO NECESITA IMPORTS
 export function boton(){
-    $(function(){
-        $("button").click(function(){
+    $(() => {
+        $("button").click(() => {
             $("p").hide();
         });
     });
@@ -22,7 +22,7 @@ export default class Jq {
     }
 
     public botonborra(){
-        $( "button" ).click(function() {
+        $( "button" ).click(() => {
             $('#test').remove();
         });
 
