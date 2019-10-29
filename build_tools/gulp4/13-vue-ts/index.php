@@ -5,14 +5,12 @@
     <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="dist/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/main.css">
-    <link rel="stylesheet" href="dist/caja.css">
+    <link rel="stylesheet" href="dist/app.css">
+
     <title>Gulp4 ejemplo 6</title>
     <?php include_once 'titulo.html'?>
     <!-- GULP OUT-->
-    <script src="dist/vendor.js"></script>
-    <script src="dist/plugins.js"></script>
+    <script src="dist/cdn.js"></script>
 </head>
 <body>
 
@@ -46,12 +44,9 @@
 
 
 <!-- WEBPACK OUT -->
+<script src="dist/webpack.js?v=<?=time()?> "></script>
+<script src="dist/gulp.js?v=<?=time()?> "></script>
 
-<script src="dist/webpack-bundle.js?v=<?=time()?> "></script>
-<script src="dist/onready.js?v=<?=time()?> "></script>
-<!--<script src="es5/webpack/index.js"></script>-->
-<!--<script src="es5/webpack/componente.js"></script>-->
-<!--<script src="es5/webpack/need_lodash.js"></script>-->
 
 
 <script>uno('index') //va;</script>

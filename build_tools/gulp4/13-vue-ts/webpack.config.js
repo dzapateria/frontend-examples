@@ -4,7 +4,7 @@ module.exports = {
    entry: ['./src/ts/index.ts','./src/ts/componente.ts','./src/ts/need_lodash.ts'],
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: 'webpack-bundle.js'
+        filename: 'webpack.js'
     },
     devtool: "inline-source-map",
     resolve: {
