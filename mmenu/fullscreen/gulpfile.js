@@ -12,27 +12,22 @@ const uglifyJs = require('gulp-uglify');
 // File path & variables
 
 const config = {
-    proxy: 'frontend-examples.test/build_tools/gulp4/13-vue-ts/',  //format  frontend-examples.test
+    proxy: 'http://frontend-examples.test',  //format  frontend-examples.test
     stylesInputs: [ // output app.css
-        'cdn/bootstrap.min.css',
-        'src/scss/**/{main,caja}*.scss'
+        'src/scss/app.scss'
     ],
     jsCdnInputs: [ // output dist/cdn.js
-        'cdn/lodash.min.js',
         'cdn/jquery.min.js',
-        'cdn/vue.min.js',
         'cdn/bootstrap.bundle.min.js',
     ],  // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN { }
     jsInputs:[ // output app.js
-        'src/js/functions/{uno,dos,tres}.js',
-        'src/js/**/{lib1,lib2,lib3}*.js'
+    'src/js/**/{app}.js'
     ],
     jsWathDir: [
-        'src/js/**/{*.js,*.ts}',
-        'src/ts/**/{*.ts}'
+        'src/js/**/{*.js,*.ts}'
     ],
-    scssWathDir: 'src/scss/**/*.scss',
-    filesWatch: './**/*.{php,html,twig,json}', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
+    scssWathDir: 'src/scss/app.scss',
+    filesWatch: ['./**/*.{php,html,twig,json}', 'gulpfile.js'], // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
     outDir: './dist'
 }
 
@@ -76,7 +71,7 @@ function js(){
 function watch() {
     browserSync.init({
         proxy: config.proxy
-        //tunnel: 'soloaplicaciones'
+       // tunnel: 'soloaplicaciones'
     });
     gulp.watch(config.scssWathDir, css);
     gulp.watch(config.jsWathDir, js);

@@ -9,5 +9,29 @@
 </head>
 <body>
 <h2>Home</h2>
+
+<main id="app">
+    <h1>{{message}}</h1>
+    <input type="text" v-model="message">
+
+</main>
+
+<div class="caja">
+    caja
+</div>
+
+
+<script>
+
+    const app = new Vue({
+
+        el:'#app',
+        data:{
+            message:''
+        }
+    })
+</script>
+
+
 </body>
 </html>

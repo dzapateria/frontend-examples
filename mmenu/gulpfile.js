@@ -12,26 +12,20 @@ const uglifyJs = require('gulp-uglify');
 // File path & variables
 
 const config = {
-    proxy: 'frontend-examples.test/build_tools/gulp4/13-vue-ts/',  //format  frontend-examples.test
+    proxy: 'frontend-examples.test/mmenu/fullscreen/',  //format  frontend-examples.test
     stylesInputs: [ // output app.css
-        'cdn/bootstrap.min.css',
-        'src/scss/**/{main,caja}*.scss'
     ],
     jsCdnInputs: [ // output dist/cdn.js
-        'cdn/lodash.min.js',
-        'cdn/jquery.min.js',
-        'cdn/vue.min.js',
-        'cdn/bootstrap.bundle.min.js',
+        '../cdn/jquery.min.js',
+        '../cdn/bootstrap.bundle.min.js',
     ],  // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN { }
     jsInputs:[ // output app.js
-        'src/js/functions/{uno,dos,tres}.js',
-        'src/js/**/{lib1,lib2,lib3}*.js'
+
     ],
     jsWathDir: [
-        'src/js/**/{*.js,*.ts}',
-        'src/ts/**/{*.ts}'
+        'src/js/**/{*.js,*.ts}'
     ],
-    scssWathDir: 'src/scss/**/*.scss',
+    scssWathDir: 'src/css/**/*.{css,scss}',
     filesWatch: './**/*.{php,html,twig,json}', // -- CUIDADO NO PONER ESPACIOS ENTRE ITEMS EN {}
     outDir: './dist'
 }
@@ -75,8 +69,8 @@ function js(){
 
 function watch() {
     browserSync.init({
-        proxy: config.proxy
-        //tunnel: 'soloaplicaciones'
+        proxy: config.proxy,
+       // tunnel: 'soloaplicaciones'
     });
     gulp.watch(config.scssWathDir, css);
     gulp.watch(config.jsWathDir, js);

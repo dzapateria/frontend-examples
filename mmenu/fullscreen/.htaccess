@@ -1,0 +1,12 @@
+# CONTENIDO DEL ARCHIVO .htaccess
+RewriteEngine On
+
+# ---- FRONT CONTROLLER ----
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+# RewriteRule ^(.*)$ / [QSA]
+
+# SUBDIRECTORIO REDIRECT
+RewriteCond %{REQUEST_URI} mmenu/fullscreen
+RewriteRule ^(.*)$ /mmenu/fullscreen/ [QSA]
