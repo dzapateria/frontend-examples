@@ -2,7 +2,7 @@
 <p>Contenido pagina de inicio</p>
 <?php
 
-array_push($url_fn, 'por2', 'portesgratis', 'paises', 'precio', 'capitalize', 'redirect');
+array_push($url_fn, 'portesgratis', 'precio', 'capitalize', 'redirect');
 
 
 
@@ -23,7 +23,7 @@ array_push($url_fn, 'por2', 'portesgratis', 'paises', 'precio', 'capitalize', 'r
 
 // $url_returns = ex($fn_assoc_args);
 
-$url_returns = fn_init();
+$url_returns = fn_init(['por2', 'paises']);
 
 
 ?>

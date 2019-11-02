@@ -228,9 +228,9 @@ function fn_assoc_args(array $url_fn){
 
 }
 
-function fn_init(){
+function fn_init($add = []){
     global $url_fn, $fn_assoc_args;
-
+$url_fn = array_merge($url_fn, $add);
 $fn_assoc_args = fn_assoc_args($url_fn);
 
 $url_returns = ex($fn_assoc_args);

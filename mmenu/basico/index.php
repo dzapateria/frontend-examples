@@ -1,6 +1,6 @@
 
 <?php
-include_once 'config.php';
+include_once 'db.php';
 include_once 'framework/url.php';
 include_once 'app/url_funciones.php';
 
