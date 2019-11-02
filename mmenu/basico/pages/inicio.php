@@ -9,7 +9,7 @@ array_push($url_fn, 'por2', 'portesgratis', 'paises', 'precio', 'capitalize', 'r
 // Recorre todas las funciones y devuelve un array con el nombre de la funcion como llave y
 // los valores con los parametros enviados
 
-$fn_assoc_args = fn_assoc_args($url_fn);
+// ---------- $fn_assoc_args = fn_assoc_args($url_fn);
 
 // var_dump($fn_assoc_args);
 

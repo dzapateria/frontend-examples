@@ -230,7 +230,9 @@ function fn_assoc_args(array $url_fn){
 
 function fn_init(){
     global $url_fn, $fn_assoc_args;
+
 $fn_assoc_args = fn_assoc_args($url_fn);
+
 $url_returns = ex($fn_assoc_args);
 return $url_returns;
 }
