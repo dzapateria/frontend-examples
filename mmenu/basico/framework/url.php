@@ -28,7 +28,7 @@ $url = get_url(); # productos/id/322/
 $url_clean = get_url_clean($url);
 $url_array = get_url_array(); # 'productos', 'id', '322'
 $url_fn = []; # args lista de escuha
-
+$fn_assoc_args = [];
 
 
 function get_url()
@@ -228,4 +228,29 @@ function fn_assoc_args(array $url_fn){
 
 }
 
+function fn_init(){
+    global $url_fn, $fn_assoc_args;
+$fn_assoc_args = fn_assoc_args($url_fn);
+$url_returns = ex($fn_assoc_args);
+return $url_returns;
+}
 
+
+
+function ex($assoc_array){
+    $returns = [];
+    global $url_fn, $url_array, $fn_assoc_args; //lista de funciones
+
+    foreach($url_fn as $value){
+        #si no esta la funcion en la URL salta con la siguiente
+        if (!in_array($value, $url_array)) continue;
+
+      #  echo "Se ejecutaran la funcion:  $value con los parametros: " . implode($fn_assoc_args[$value], ', ') ."<br>";
+        $args = $fn_assoc_args[$value];
+       # var_dump($args);
+        $returns[$value] = $value( $args );
+    }
+
+    return $returns;
+
+}
